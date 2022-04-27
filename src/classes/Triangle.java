@@ -12,7 +12,7 @@ public class Triangle {
         this.setSide3(side3);
     }
 
-    public static boolean existsTriangle(float side1, float side2, float side3) {
+    public static boolean existsTriangle(int side1, int side2, int side3) {
         return (side1 > 0) && (side2 > 0) && (side3 > 0) && (side1 + side2 > side3) && (side1 + side3 > side2) && (side3 + side2 > side1);
     }
 
@@ -40,27 +40,28 @@ public class Triangle {
         this.side3 = side3;
     }
 
-    public float getAngles(float sideA,float sideB,float sideC){
-        return (float)Math.toDegrees(Math.acos((sideA*sideA + sideB*sideB - sideC*sideC) /(2*sideB*sideA)));
+    public float getAngles(float sideA, float sideB, float sideC) {
+        return (float) Math.toDegrees(Math.acos((sideA * sideA + sideB * sideB - sideC * sideC) / (2 * sideB * sideA)));
     }
 
-    public int getPerimeter(){
-        return (side1+side2+side3);
+    public int getPerimeter() {
+        return (side1 + side2 + side3);
     }
 
-    public float getSquare(){
-        float p = (side1+side2+side3)/2f;
-        return (float) Math.sqrt(p*(p-side1)*(p-side2)*(p-side3));
+    public float getSquare() {
+        float p = (side1 + side2 + side3) / 2f;
+        return (float) Math.sqrt(p * (p - side1) * (p - side2) * (p - side3));
     }
+
     @Override
     public String toString() {
         return "Triangle : {" +
                 "side1 = " + side1 +
                 ", side2 = " + side2 +
                 ", side3 = " + side3 +
-                ", angleA = " + getAngles(side1,side2,side3) +
-                ", angleB = " + getAngles(side1,side3,side2) +
-                ", angleC = " + getAngles(side3,side2,side1) +
+                ", angleA = " + getAngles(side1, side2, side3) +
+                ", angleB = " + getAngles(side1, side3, side2) +
+                ", angleC = " + getAngles(side3, side2, side1) +
                 ", perimeter = " + getPerimeter() +
                 ", square = " + getSquare() +
                 '}';

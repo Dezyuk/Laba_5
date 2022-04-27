@@ -26,8 +26,7 @@ public class Triangles {
         for (Triangle triangle1 : triangles) {
             if (triangle1 == null) {
                 break;
-            }
-            else {
+            } else {
                 n++;
             }
         }
@@ -51,13 +50,13 @@ public class Triangles {
         return area / triangles.length;
     }
 
-    public Triangle getLargestHypotenuse(){
+    public Triangle getLargestHypotenuse() {
         int max_hypotenuse = 0;
-        Triangle tmpTriangle = new Triangle(0,0,0);
-        for(Triangle triangle : triangles){
-            if(Math.max(Math.max(triangle.getSide1(),triangle.getSide2()),triangle.getSide3())>max_hypotenuse){
+        Triangle tmpTriangle = new Triangle(0, 0, 0);
+        for (Triangle triangle : triangles) {
+            if ((Math.max(Math.max(triangle.getSide1(), triangle.getSide2()), triangle.getSide3()) > max_hypotenuse) && (triangle instanceof RightTriangle)) {
                 tmpTriangle = triangle;
-                max_hypotenuse = Math.max(Math.max(triangle.getSide1(),triangle.getSide2()),triangle.getSide3());
+                max_hypotenuse = Math.max(Math.max(triangle.getSide1(), triangle.getSide2()), triangle.getSide3());
             }
         }
         return tmpTriangle;
