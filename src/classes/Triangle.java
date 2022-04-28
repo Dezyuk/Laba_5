@@ -20,7 +20,7 @@ public class Triangle {
         return side1;
     }
 
-    public void setSide1(int side1) {
+    protected void setSide1(int side1) {
         this.side1 = side1;
     }
 
@@ -28,7 +28,7 @@ public class Triangle {
         return side2;
     }
 
-    public void setSide2(int side2) {
+    protected void setSide2(int side2) {
         this.side2 = side2;
     }
 
@@ -36,7 +36,7 @@ public class Triangle {
         return side3;
     }
 
-    public void setSide3(int side3) {
+    protected void setSide3(int side3) {
         this.side3 = side3;
     }
 

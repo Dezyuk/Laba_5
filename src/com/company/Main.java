@@ -43,7 +43,7 @@ public class Main {
         }
         System.out.println(rightTriangles);
 
-        System.out.println(rightTriangles.getLargestHypotenuse());
+        System.out.println(rightTriangles.getLargestRightTriangle());
 
     }
 }
